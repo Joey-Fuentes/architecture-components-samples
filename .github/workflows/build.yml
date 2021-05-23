@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: WOrk
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Work
         uses: Joey-Fuentes/android-build-action@v1.0.0
         with:
           project-path: BasicSample
