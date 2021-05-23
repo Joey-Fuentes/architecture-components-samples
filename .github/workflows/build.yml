@@ -19,6 +19,6 @@ jobs:
         with:
           project-path: BasicSample
           output-path: my-app.apk
-          browserstack-upload: false
+          browserstack-upload: true
           browserstack-username: ${{ secrets.BROWSERSTACK_USERNAME }}
           browserstack-access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
