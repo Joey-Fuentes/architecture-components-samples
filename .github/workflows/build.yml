@@ -1,2 +1,5 @@
 name: Build Android App
 uses: Joey-Fuentes/android-build-action@v1.0.0
+ project-path: BasicSample
+ output-path: my-app.apk
+ browserstack-upload: false
