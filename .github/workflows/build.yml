@@ -1,5 +1,14 @@
 name: Build Android App
-uses: Joey-Fuentes/android-build-action@v1.0.0
- project-path: BasicSample
- output-path: my-app.apk
- browserstack-upload: false
+on: [pull_request, push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload APK
+        uses: Joey-Fuentes/android-build-action@v1.0.0
+        with:
+          project-path: BasicSample
+          output-path: my-app.apk
+          browserstack-upload: false
+          browserstack-username: ${{ secrets.BROWSERSTACK_USERNAME }}
+          browserstack-access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
